@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pelikulak>
+<pelikula>
+<izena>Matrix</izena>
+<direktorea>Lana, Lilly Wachowski</direktorea>
+<urtea>1999</urtea>
+<generoa>Dci-Fi</generoa>
+<egoera>Gustokoena</egoera>
+</pelikula>
+<pelikula>
+<izena>Terminator 6</izena>
+<direktorea>James Cameron</direktorea>
+<urtea>2019</urtea>
+<generoa>Sci-Fi</generoa>
+<egoera>Estreinatu gabe</egoera>
+</pelikula>
+<pelikula>
+<izena>Paterson</izena>
+<direktorea>Jim Jarmusch</direktorea>
+<urtea>2016</urtea>
+<generoa>Drama</generoa>
+<egoera>Ikusita</egoera>
+</pelikula>
+<pelikula>
+<izena>Los amos de Dogtown</izena>
+<direktorea>Catherine Hardwicke</direktorea>
+<urtea>2005</urtea>
+<generoa>Drama</generoa>
+<egoera>Ikusita</egoera>
+</pelikula>
+<pelikula>
+<izena>La monja</izena>
+<direktorea>Corin Hardy</direktorea>
+<urtea>2018</urtea>
+<generoa>Terror</generoa>
+<egoera>Ikusteko</egoera>
+</pelikula>
+<pelikula>
+<izena>Los increibles</izena>
+<direktorea>Brad Bird</direktorea>
+<urtea>2004</urtea>
+<generoa>Animazio</generoa>
+<egoera>Ikusita</egoera>
+</pelikula>
+<pelikula>
+<izena>Mamma mia !</izena>
+<direktorea>Phyllida Lloyd</direktorea>
+<urtea>2008</urtea>
+<generoa>Musikal</generoa>
+<egoera>Ikusteko</egoera>
+</pelikula>
+<pelikula>
+<izena>Infinity war</izena>
+<direktorea>Anthony, Joe Russo</direktorea>
+<urtea>2018</urtea>
+<generoa>Sci-Fi</generoa>
+<egoera>Ikusita</egoera>
+</pelikula>
+<pelikula>
+<izena>La habitacion</izena>
+<direktorea>Lenny Abrahamson</direktorea>
+<urtea>2015</urtea>
+<generoa>Drama</generoa>
+<egoera>Gustokoena</egoera>
+</pelikula>
+<pelikula>
+<izena>Your name</izena>
+<direktorea>Makoto Shinkari</direktorea>
+<urtea>2016</urtea>
+<generoa>Animazio</generoa>
+<egoera>Gustokoena</egoera>
+</pelikula>
+<pelikula>
+<izena>Los idiotas</izena>
+<direktorea>Lars Von Tier</direktorea>
+<urtea>1998</urtea>
+<generoa>Drama</generoa>
+<egoera>Ikusita</egoera>
+</pelikula>
+
+</pelikulak>

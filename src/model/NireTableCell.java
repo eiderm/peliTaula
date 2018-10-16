@@ -6,10 +6,14 @@
 package model;
 
 import controller.SartuListan;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TableCell;
+import javax.xml.parsers.ParserConfigurationException;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -29,7 +33,13 @@ public class NireTableCell extends TableCell<Pelikula, String>
     {
         if (!isEmpty()) {
             super.startEdit();
-            createComboBox();
+            try {
+                createComboBox();
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(NireTableCell.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(NireTableCell.class.getName()).log(Level.SEVERE, null, ex);
+            }
             setText(null);
             setGraphic(comboBox);
         }
@@ -66,7 +76,7 @@ public class NireTableCell extends TableCell<Pelikula, String>
         }
     }
 
-    private void createComboBox()
+    private void createComboBox() throws ParserConfigurationException, SAXException
     {
         comboBox = new ComboBox<>(FXCollections.observableArrayList(SartuListan.cargarDatosEgoera()));
         comboBoxConverter(comboBox);
