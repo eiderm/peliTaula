@@ -47,16 +47,19 @@ import model.NireTableCell;
 import model.NumberTextField;
 import model.Pelikula;
 import org.xml.sax.SAXException;
-
+/**
+ *
+ * @author DM3-2-22
+ */
 public class MainWindow extends Application
 {
     
     private final TableView<Pelikula> table = new TableView<>();
     final HBox hb = new HBox();
-    File pelifile = new File("Pelikulak.xml");
+    File pelifile = new File("Pelikulak.txt");
 
     @Override
-    public void start(Stage stage) throws ParserConfigurationException, SAXException
+    public void start(Stage stage) throws ParserConfigurationException, SAXException, FileNotFoundException
     {
         Scene scene = new Scene(new Group());
         
@@ -80,8 +83,16 @@ public class MainWindow extends Application
             ((Pelikula) t.getTableView().getItems().get(
                     t.getTablePosition().getRow())).setIzena(t.getNewValue());
             try {
-                SartuListan.guardar(table,pelifile);
+                SartuListan.guardarDatos(table,pelifile);
             } catch (TransformerException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -94,8 +105,16 @@ public class MainWindow extends Application
             ((Pelikula) t.getTableView().getItems().get(
                     t.getTablePosition().getRow())).setDirek(t.getNewValue());
             try {
-                SartuListan.guardar(table,pelifile);
+                SartuListan.guardarDatos(table,pelifile);
             } catch (TransformerException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -108,8 +127,16 @@ public class MainWindow extends Application
             ((Pelikula) t.getTableView().getItems().get(
                     t.getTablePosition().getRow())).setUrte(t.getNewValue());
             try {
-                SartuListan.guardar(table,pelifile);
+                SartuListan.guardarDatos(table,pelifile);
             } catch (TransformerException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -122,8 +149,16 @@ public class MainWindow extends Application
             ((Pelikula) t.getTableView().getItems().get(
                     t.getTablePosition().getRow())).setGenero(t.getNewValue());
             try {
-                SartuListan.guardar(table, pelifile);
+                SartuListan.guardarDatos(table, pelifile);
             } catch (TransformerException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -138,13 +173,21 @@ public class MainWindow extends Application
                             .get(t.getTablePosition().getRow()))
                             .setEgoera(t.getNewValue());
                     try {
-                        SartuListan.guardar(table, pelifile);
+                        SartuListan.guardarDatos(table, pelifile);
                     } catch (TransformerException ex) {
                         Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    } catch (ParserConfigurationException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            }
                 });
 
-        table.setItems(FXCollections.observableList(SartuListan.cargarDatosPeli(pelifile)));
+        table.setItems(FXCollections.observableList(SartuListan.cargarDatos(pelifile)));
         table.getColumns().addAll(izenCol, direkCol, urteCol, generoCol, egoeraCol);
         final TextField txtIzena = new TextField();        
         txtIzena.setMaxWidth(izenCol.getPrefWidth());
@@ -158,7 +201,7 @@ public class MainWindow extends Application
         final TextField txtGenero = new TextField();
         txtGenero.setMaxWidth(100);
         txtGenero.setPromptText("Generoa");
-        final ComboBox cbxEgoera = new ComboBox(FXCollections.observableList(SartuListan.cargarDatosEgoera()));
+        final ComboBox cbxEgoera = new ComboBox(FXCollections.observableList(SartuListan.cargarDatosEgoeraXml()));
         cbxEgoera.setMaxWidth(100);
         cbxEgoera.setPromptText("Egoera");
 
@@ -180,8 +223,16 @@ public class MainWindow extends Application
             }
             
             try {
-                SartuListan.guardar(table,pelifile);
+                SartuListan.guardarDatos(table,pelifile);
             } catch (TransformerException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -192,8 +243,16 @@ public class MainWindow extends Application
             table.getItems().remove(peli);
             
             try {
-                SartuListan.guardar(table,pelifile);
+                SartuListan.guardarDatos(table,pelifile);
             } catch (TransformerException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParserConfigurationException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
             
@@ -205,10 +264,12 @@ public class MainWindow extends Application
             fChooser.setTitle("Aukeratu fitxategia");
             pelifile = fChooser.showOpenDialog(stage);
             try {
-                table.setItems(FXCollections.observableList(SartuListan.cargarDatosPeli(pelifile)));
+                table.setItems(FXCollections.observableList(SartuListan.cargarDatos(pelifile)));
             } catch (ParserConfigurationException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SAXException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -232,7 +293,6 @@ public class MainWindow extends Application
     public static void main(String[] args)
     {
         launch(args);
-    }
-    
+    }   
 
 }

@@ -17,7 +17,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author Casa
+ * @author DM3-2-22
  */
 public class NireTableCell extends TableCell<Pelikula, String>
 {
@@ -78,7 +78,7 @@ public class NireTableCell extends TableCell<Pelikula, String>
 
     private void createComboBox() throws ParserConfigurationException, SAXException
     {
-        comboBox = new ComboBox<>(FXCollections.observableArrayList(SartuListan.cargarDatosEgoera()));
+        comboBox = new ComboBox<>(FXCollections.observableArrayList(SartuListan.cargarDatosEgoeraXml()));
         comboBoxConverter(comboBox);
         comboBox.valueProperty().set(getEgoera());
         comboBox.setMinWidth(this.getWidth() - this.getGraphicTextGap() * 2);

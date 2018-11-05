@@ -2,24 +2,38 @@
 <pelikulak>
 <pelikula>
 <izena>Matrix</izena>
-<direktorea>Lana, Lilly Wachowski</direktorea>
+<direktorea>Lana Wachowski eta Lilly Wachowski</direktorea>
 <urtea>1999</urtea>
-<generoa>Dci-Fi</generoa>
+<generoa>Sci-Fi</generoa>
 <egoera>Gustokoena</egoera>
 </pelikula>
 <pelikula>
+<izena>La habitacion</izena>
+<direktorea>Lenny Abrahamson</direktorea>
+<urtea>2015</urtea>
+<generoa>Drama</generoa>
+<egoera>Gustokoena</egoera>
+</pelikula>
+<pelikula>
+<izena>Your name</izena>
+<direktorea>Makoto Shinkai</direktorea>
+<urtea>2016</urtea>
+<generoa>Animazio</generoa>
+<egoera>Gustokoena</egoera>
+</pelikula>
+<pelikula>
+<izena>Los idiotas</izena>
+<direktorea>Lars von Trier</direktorea>
+<urtea>1998</urtea>
+<generoa>Drama</generoa>
+<egoera>Ikusita</egoera>
+</pelikula>
+<pelikula>
 <izena>Terminator 6</izena>
-<direktorea>James Cameron</direktorea>
+<direktorea>JamesCameron</direktorea>
 <urtea>2019</urtea>
 <generoa>Sci-Fi</generoa>
 <egoera>Estreinatu gabe</egoera>
-</pelikula>
-<pelikula>
-<izena>Paterson</izena>
-<direktorea>Jim Jarmusch</direktorea>
-<urtea>2016</urtea>
-<generoa>Drama</generoa>
-<egoera>Ikusita</egoera>
 </pelikula>
 <pelikula>
 <izena>Los amos de Dogtown</izena>
@@ -43,39 +57,24 @@
 <egoera>Ikusita</egoera>
 </pelikula>
 <pelikula>
-<izena>Mamma mia !</izena>
+<izena>Mamma mia!</izena>
 <direktorea>Phyllida Lloyd</direktorea>
 <urtea>2008</urtea>
 <generoa>Musikal</generoa>
 <egoera>Ikusteko</egoera>
 </pelikula>
 <pelikula>
-<izena>Infinity war</izena>
-<direktorea>Anthony, Joe Russo</direktorea>
+<izena>Inifinty War</izena>
+<direktorea>Anthony Russo eta Joe Russo</direktorea>
 <urtea>2018</urtea>
 <generoa>Sci-Fi</generoa>
 <egoera>Ikusita</egoera>
 </pelikula>
 <pelikula>
-<izena>La habitacion</izena>
-<direktorea>Lenny Abrahamson</direktorea>
-<urtea>2015</urtea>
-<generoa>Drama</generoa>
-<egoera>Gustokoena</egoera>
-</pelikula>
-<pelikula>
-<izena>Your name</izena>
-<direktorea>Makoto Shinkari</direktorea>
+<izena>Deadpool</izena>
+<direktorea>Tim Miller</direktorea>
 <urtea>2016</urtea>
-<generoa>Animazio</generoa>
-<egoera>Gustokoena</egoera>
-</pelikula>
-<pelikula>
-<izena>Los idiotas</izena>
-<direktorea>Lars Von Tier</direktorea>
-<urtea>1998</urtea>
-<generoa>Drama</generoa>
+<generoa>Sci-Fi</generoa>
 <egoera>Ikusita</egoera>
 </pelikula>
-
 </pelikulak>

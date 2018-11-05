@@ -7,11 +7,10 @@ package model;
 
 /**
  *
- * @author aitor
+ * @author DM3-2-22
  */
 public class Pelikula
 {
-
     private String izena;
     private String direktorea;
     private int urtea;
